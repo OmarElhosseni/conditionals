@@ -126,7 +126,7 @@ if (!choice) {
     }
 }else if (choice === 'run' && randomPerson === 'Felipe' ) {
         if (item === 'candy') {
-            console.log('You adn Felipe, a nearby robot run away and share your candy.')
+            console.log('You and Felipe, a nearby robot run away and share your candy.')
             money = 0;
         }else {
             console.log('Felipe, another android, and you runaway without candy :(');
