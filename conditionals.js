@@ -116,11 +116,27 @@ if (!choice) {
     money = 0;
 }else if (choice !== 'run' && randomPerson === 'Felipe') {
     console.log('The protesters attack you');
-    if(item != jacket) {
-        console.log("...but Felipe, a fellow android shows up to help you escape them");
+    if(item === 'hammer') {
+        console.log("You and Felipe, a nearby robot, singlehandedly fight and defeat the protesters");
+        health -= 90;
+        money += 450;
     } else {
-        console.log("...and Felipe, a fellow android, who would normally help doesn't recognize you with the jacket");
+        console.log("...and Felipe, a fellow android, who would normally help doesn't help you fight the protesters with");
         health -= 50;
+    }
+}else if (choice === 'run' && randomPerson === 'Felipe' ) {
+        if (item === 'candy') {
+            console.log('You adn Felipe, a nearby robot run away and share your candy.')
+            money = 0;
+        }else {
+            console.log('Felipe, another android, and you runaway without candy :(');
+        }
+     } else if (choice !== 'run' && randomPerson === 'John' ) {
+    if (item === 'hammer') {
+        console.log('John, a nearby officer arrests you for attempting to attack a protest.')
+        money = 0;
+    }else {
+        console.log('John, a neatby officer protects you fromt he crowd');
     }
 } else if (choice === 'run' && randomPerson === 'John') {
     console.log("You run, but John, a human officer with an attitude and a heart of gold, finds you...");
